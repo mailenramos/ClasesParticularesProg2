@@ -1,0 +1,12 @@
+public class CondicionValorMayor extends Condicion {
+
+    private double valor;
+
+    public CondicionValorMayor(double valor) {
+        this.valor = valor;
+    }
+
+    public boolean cumple(Obra o) {
+        return o.getValorTasacion() > valor;
+    }
+}
