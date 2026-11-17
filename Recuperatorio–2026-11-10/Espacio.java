@@ -1,6 +1,8 @@
 import com.sun.jdi.connect.Connector;
 import java.security.PublicKey;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Espacio extends Elemento{
 
@@ -19,8 +21,8 @@ public class Espacio extends Elemento{
             }
         }
 
-    return anioMenor;
-}
+        return anioMenor;
+    }
     public double getValorTasacion(){
         double valor=0;
 
@@ -70,6 +72,14 @@ public class Espacio extends Elemento{
             return null;
         }
             
+    }
+    public void addElemento(Elemento e){
+        if(!this.elementos.contains(e)){
+            this.elementos.add(e);
+        }
+    }
+    public Espacio getCopiaEspacio(){
+        return new Espacio(this.getNombre());
     }
 
     public ArrayList<Obra> getListadoObras(Comparator<Obra> c) {

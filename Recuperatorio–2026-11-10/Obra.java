@@ -1,5 +1,5 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Obra extends Elemento{
 
@@ -19,7 +19,7 @@ public class Obra extends Elemento{
     }
     public void addTecnica(String tecnica){
         if(!this.tecnicas.contains(tecnica)){
-            tecnicas.addTecnica(tecnica);
+            tecnicas.add(tecnica);
         }
     }
     public String getAutor() {
@@ -34,10 +34,10 @@ public class Obra extends Elemento{
     public double getValorTasacion(){
         return this.valorTasasion;
     }
-    public Arraylist<String> getTecnicas(){
-        return new ArrayList<>(this.tecnicas);
-        
+    public ArrayList<String> getTecnicas(){
+        return new ArrayList<String>(this.tecnicas);
     }
+    
     public Elemento getCopia(Condicion c){
         if(c.cumple(this)){
             Obra copia=new Obra(this.nombre,

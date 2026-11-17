@@ -6,7 +6,7 @@ public class CondicionAnioAntes extends Condicion {
         this.anio = anio;
     }
 
-    public boolean cumple(Obra o) {
-        return o.getAnioCreacion() < anio;
+    public boolean cumple(Elemento e) {
+        return e.getAnioCreacion() < anio;
     }
 }

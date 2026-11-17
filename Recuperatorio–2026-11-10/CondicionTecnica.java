@@ -6,7 +6,7 @@ public class CondicionTecnica extends Condicion {
         this.tecnica = tecnica;
     }
 
-    public boolean cumple(Obra o) {
-        return o.getTecnicas().contains(tecnica);
+    public boolean cumple(Elemento e) {
+        return e.getTecnicas().contains(tecnica);
     }
 }

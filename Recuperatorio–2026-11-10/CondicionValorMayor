@@ -6,7 +6,7 @@ public class CondicionValorMayor extends Condicion {
         this.valor = valor;
     }
 
-    public boolean cumple(Obra o) {
-        return o.getValorTasacion() > valor;
+    public boolean cumple(Elemento e) {
+        return e.getValorTasacion() > valor;
     }
 }
