@@ -57,8 +57,18 @@ public class Obra extends Elemento{
     }
 
     public ArrayList<Obra> getListadoObras(Comparator<Obra> c) {
-    ArrayList<Obra> lista = new ArrayList<>();
-    lista.add(this);
-    return lista;
-}
+        ArrayList<Obra> lista = new ArrayList<>();
+        lista.add(this);
+
+        return lista;
+    }
+    public String toString() {
+        return "Obra{" +
+                "nombre='" + nombre + '\'' +
+                ", autor='" + autor + '\'' +
+                ", anioCreacion=" + anioCreacion +
+                ", valorTasasion=" + valorTasasion +
+                ", tecnicas=" + tecnicas +
+                '}';
+    }
 }

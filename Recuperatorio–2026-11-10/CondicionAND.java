@@ -9,6 +9,6 @@ public class CondicionAND extends Condicion {
     }
     @Override 
     public boolean cumple(Elemento e) {
-        return c1.cumple(e) && c2.cumple();
+        return c1.cumple(e) && c2.cumple(e);
     }
 }
